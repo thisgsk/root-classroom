@@ -2,7 +2,7 @@
 // 메인 화면을 표시할 HTML 요소 가져오기
 const app = document.querySelector('#app');
 // 백엔드 API 서버 주소
-const API_URL = 'http://localhost:3001/api';
+const API_URL = 'https://root-classroom-api2.onrender.com/api';
 // 브라우저에 저장될 학습 기록의 이름 (로컬스토리지 키)
 const STORE = 'root-classroom-lesson2-history-v1';
 // 사용자의 과거 시험 기록 배열
