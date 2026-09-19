@@ -120,16 +120,22 @@ function render(html) {
 // 로그인 페이지 표시
 function showLoginPage() {
   render(`<section class="hero"><div><div class="eyebrow">UNDERSTAND. PRACTICE. GROW.</div><h1>뿌리노트<br>로그인</h1><p>계정에 로그인하면 모든 기기에서<br>학습 기록을 동기화할 수 있습니다.</p></div></section>
-    <div class="notice"><b>로그인 또는 회원가입</b><br>계정으로 로그인하면 학습 진도가 서버에 저장됩니다.</div>
-    <section class="cards" style="max-width: 500px; margin: 20px auto;">
+    <section class="cards" style="max-width: 900px; margin: 30px auto; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start;">
+      <article class="card" style="padding: 30px; text-align: center;">
+        <div style="font-size: 60px; margin-bottom: 15px;">📚</div>
+        <h3 style="margin-bottom: 10px;">비디오 강의</h3>
+        <p style="color: #666; margin-bottom: 15px; font-size: 14px;">YouTube에서 명확한 설명을 받으세요</p>
+        <a href="https://www.youtube.com/@root-classroom" target="_blank" style="display: inline-block; padding: 10px 20px; background: #FF0000; color: white; border-radius: 4px; text-decoration: none; font-weight: bold;">📺 채널 방문</a>
+      </article>
       <article class="card" style="padding: 30px;">
         <h2 style="margin-bottom: 20px;">로그인</h2>
-        <input type="text" id="login-email" placeholder="이메일 또는 사용자명" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px;">
-        <input type="password" id="login-password" placeholder="비밀번호" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px;">
-        <button class="wide" onclick="handleLogin()" style="margin-top: 20px;">로그인 →</button>
+        <input type="text" id="login-email" placeholder="이메일 또는 사용자명" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+        <input type="password" id="login-password" placeholder="비밀번호" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+        <button class="wide" onclick="handleLogin()" style="margin-top: 20px; width: 100%;">로그인 →</button>
         <button class="secondary" onclick="toggleSignup()" style="margin-top: 10px; width: 100%;">계정이 없으신가요? 회원가입</button>
       </article>
-    </section>`);
+    </section>
+    <div class="notice" style="max-width: 900px; margin: 20px auto;"><b>로그인 또는 회원가입</b><br>계정으로 로그인하면 학습 진도가 서버에 저장됩니다.</div>`);
 
   document.querySelector('#login-email').addEventListener('keypress', e => {
     if (e.key === 'Enter') handleLogin();
@@ -145,17 +151,23 @@ function toggleSignup() {
 
 function showSignupPage() {
   render(`<section class="hero"><div><div class="eyebrow">UNDERSTAND. PRACTICE. GROW.</div><h1>뿌리노트<br>회원가입</h1><p>계정을 만들면 모든 기기에서<br>학습 기록을 동기화할 수 있습니다.</p></div></section>
-    <div class="notice"><b>새 계정 생성</b><br>회원가입 후 학습을 시작하세요.</div>
-    <section class="cards" style="max-width: 500px; margin: 20px auto;">
+    <section class="cards" style="max-width: 900px; margin: 30px auto; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start;">
+      <article class="card" style="padding: 30px; text-align: center;">
+        <div style="font-size: 60px; margin-bottom: 15px;">📚</div>
+        <h3 style="margin-bottom: 10px;">비디오 강의</h3>
+        <p style="color: #666; margin-bottom: 15px; font-size: 14px;">YouTube에서 명확한 설명을 받으세요</p>
+        <a href="https://www.youtube.com/@root-classroom" target="_blank" style="display: inline-block; padding: 10px 20px; background: #FF0000; color: white; border-radius: 4px; text-decoration: none; font-weight: bold;">📺 채널 방문</a>
+      </article>
       <article class="card" style="padding: 30px;">
         <h2 style="margin-bottom: 20px;">회원가입</h2>
-        <input type="email" id="signup-email" placeholder="이메일" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px;">
-        <input type="text" id="signup-username" placeholder="사용자명" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px;">
-        <input type="password" id="signup-password" placeholder="비밀번호" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px;">
-        <button class="wide" onclick="handleSignup()" style="margin-top: 20px;">회원가입 →</button>
+        <input type="email" id="signup-email" placeholder="이메일" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+        <input type="text" id="signup-username" placeholder="사용자명" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+        <input type="password" id="signup-password" placeholder="비밀번호" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+        <button class="wide" onclick="handleSignup()" style="margin-top: 20px; width: 100%;">회원가입 →</button>
         <button class="secondary" onclick="showLoginPage()" style="margin-top: 10px; width: 100%;">이미 계정이 있으신가요? 로그인</button>
       </article>
-    </section>`);
+    </section>
+    <div class="notice" style="max-width: 900px; margin: 20px auto;"><b>새 계정 생성</b><br>회원가입 후 학습을 시작하세요.</div>`);
 }
 
 async function handleLogin() {
