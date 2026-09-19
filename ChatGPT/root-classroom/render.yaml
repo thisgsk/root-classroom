@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: root-classroom-api
+    env: node
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    port: 3001
