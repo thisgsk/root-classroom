@@ -1,0 +1,15 @@
+{
+  "name": "root-classroom",
+  "version": "1.0.0",
+  "description": "브라우저에서 `index.html`을 열면 실행되는 개인 학습용 웹사이트입니다. 빌드나 패키지 설치는 필요 없습니다. 외부 웹폰트를 불러오지 못하면 시스템 글꼴로 표시됩니다.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

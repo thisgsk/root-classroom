@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "ChatGPT",
+			"path": ".."
+		},
+		{
+			"name": "Codex",
+			"path": "../../../Codex"
+		}
+	],
+	"settings": {}
+}
